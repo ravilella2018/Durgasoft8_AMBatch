@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14473" started-at="2018-11-15T03:57:46Z" finished-at="2018-11-15T03:58:00Z">
+  <suite name="Default suite" duration-ms="21698" started-at="2018-11-16T03:56:49Z" finished-at="2018-11-16T03:57:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14473" started-at="2018-11-15T03:57:46Z" finished-at="2018-11-15T03:58:00Z">
+    <test name="Default test" duration-ms="21698" started-at="2018-11-16T03:56:49Z" finished-at="2018-11-16T03:57:11Z">
       <class name="com.project.Automation.TC_001">
-        <test-method status="PASS" signature="f()[pri:0, instance:com.project.Automation.TC_001@5e3a8624]" name="f" duration-ms="14397" started-at="2018-11-15T03:57:46Z" finished-at="2018-11-15T03:58:00Z">
+        <test-method status="PASS" signature="AmazonSearch()[pri:0, instance:com.project.Automation.TC_001@6fd02e5]" name="AmazonSearch" duration-ms="21622" started-at="2018-11-16T03:56:49Z" finished-at="2018-11-16T03:57:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
+        </test-method> <!-- AmazonSearch -->
       </class> <!-- com.project.Automation.TC_001 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
