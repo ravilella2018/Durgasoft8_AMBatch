@@ -3,8 +3,10 @@ package com.project.Automation;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -16,7 +18,6 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.testng.Assert;
@@ -58,11 +59,11 @@ public class BasePage extends ExtentManager
 		{
 			//System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"//drivers//geckodriver.exe" );
 			System.setProperty("webdriver.gecko.driver",prop.getProperty("firefoxdriver_exe"));
-			FirefoxOptions option=new FirefoxOptions();
+			//FirefoxOptions option=new FirefoxOptions();
 			
 			//binary
-			option.setBinary("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-			driver=new FirefoxDriver(option);
+			//option.setBinary("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+			driver=new FirefoxDriver();
 		}
 		else if(prop.getProperty(browser).equalsIgnoreCase("IE"))
 		{
@@ -137,14 +138,36 @@ public class BasePage extends ExtentManager
 		return false;
 	}
 	
-	public boolean isElementPresent()
+	public boolean isElementPresent(String locatorKey) throws Exception
 	{
-		return false;	
+		List<WebElement> elementList=null;
+		
+		if(locatorKey.endsWith("_id"))	
+			elementList=driver.findElements(By.id(prop.getProperty(locatorKey)));
+		else if(locatorKey.endsWith("_name"))
+			elementList=driver.findElements(By.name(prop.getProperty(locatorKey)));
+		else if(locatorKey.endsWith("_xpath"))
+			elementList=driver.findElements(By.xpath(prop.getProperty(locatorKey)));
+		else
+		{
+			reportFailure("Locator not correct -- " + locatorKey);
+			Assert.fail("Locator not correct -- " + locatorKey);
+		}
+		
+		if(elementList.size()==0)
+			return false;
+		else
+			return true;
 	}
 	
-	public boolean verifyText()
+	public boolean verifyText(String locatorKey,String expectedTextKey) throws Exception
 	{
-		return false;
+		String actalText=getElement(locatorKey).getText().trim();
+		String expectedText=prop.getProperty(expectedTextKey);
+		if(actalText.equals(expectedText))
+			return true;
+		else
+			return false;
 	}
 	
 	
@@ -168,7 +191,7 @@ public class BasePage extends ExtentManager
 		String screenshotFileName = dt.toString().replace(":", "_").replace(" ", "_")+".png";
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		
-		//FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"//screenshots//"+screenshotFileName));
+		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"//screenshots//"+screenshotFileName));
 		
 		//put screen shot file in extent reports
 		test.log(LogStatus.INFO, "Screenshot --> "+ test.addScreenCapture(System.getProperty("user.dir"))+"//screenshots//"+screenshotFileName);

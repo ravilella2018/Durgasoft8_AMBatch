@@ -38,11 +38,12 @@ public class TC_002 extends BasePage
 		log.info("Clicked on Amazon  Search Button By using Locator --" + prop.getProperty("amazonsearchbutton_xpath"));
 		test.log(LogStatus.INFO, "Clicked on  Amazon Search Buton by using Locator -- " + prop.getProperty("amazonsearchbutton_xpath"));
 		
-		//verifyTitle();
-		//reportFailure("title doesn't match....");
+		
 		test.log(LogStatus.PASS, "testCase1 is Passed");
 		
-		//test.log(LogStatus.FAIL, "screenshot" + test.addScreenCapture("C:\\Users\\DELL\\Desktop\\test.png"));
+		test.log(LogStatus.FAIL, "screenshot" + test.addScreenCapture("C:\\Users\\DELL\\Desktop\\test.png"));
+		
+		//screenshot
 		takeScreenShot();
 	}
 	
