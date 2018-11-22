@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13722" started-at="2018-11-21T16:03:39Z" finished-at="2018-11-21T16:03:53Z">
+  <suite name="Default suite" duration-ms="26514" started-at="2018-11-21T16:06:52Z" finished-at="2018-11-21T16:07:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13722" started-at="2018-11-21T16:03:39Z" finished-at="2018-11-21T16:03:53Z">
-      <class name="com.project.Automation.TC_002">
-        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.project.Automation.TC_002@4abdb505]" name="testCase1" duration-ms="12467" started-at="2018-11-21T16:03:39Z" finished-at="2018-11-21T16:03:51Z">
+    <test name="Default test" duration-ms="26514" started-at="2018-11-21T16:06:52Z" finished-at="2018-11-21T16:07:18Z">
+      <class name="com.project.Automation.TC_003">
+        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.project.Automation.TC_003@4abdb505]" name="testCase1" duration-ms="15711" started-at="2018-11-21T16:06:52Z" finished-at="2018-11-21T16:07:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCase1 -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.Automation.TC_002@4abdb505]" name="quit" is-config="true" duration-ms="1211" started-at="2018-11-21T16:03:51Z" finished-at="2018-11-21T16:03:52Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.Automation.TC_003@4abdb505]" name="quit" is-config="true" duration-ms="10764" started-at="2018-11-21T16:07:08Z" finished-at="2018-11-21T16:07:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- com.project.Automation.TC_002 -->
+      </class> <!-- com.project.Automation.TC_003 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
