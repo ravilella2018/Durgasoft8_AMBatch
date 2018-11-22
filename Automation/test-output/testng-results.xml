@@ -2,20 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26514" started-at="2018-11-21T16:06:52Z" finished-at="2018-11-21T16:07:18Z">
+  <suite name="Default suite" duration-ms="23555" started-at="2018-11-22T00:25:44Z" finished-at="2018-11-22T00:26:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26514" started-at="2018-11-21T16:06:52Z" finished-at="2018-11-21T16:07:18Z">
-      <class name="com.project.Automation.TC_003">
-        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.project.Automation.TC_003@4abdb505]" name="testCase1" duration-ms="15711" started-at="2018-11-21T16:06:52Z" finished-at="2018-11-21T16:07:07Z">
+    <test name="Default test" duration-ms="23555" started-at="2018-11-22T00:25:44Z" finished-at="2018-11-22T00:26:08Z">
+      <class name="com.project.Automation.TC_001">
+        <test-method status="PASS" signature="AmazonSearch()[pri:0, instance:com.project.Automation.TC_001@3e57cd70]" name="AmazonSearch" duration-ms="23514" started-at="2018-11-22T00:25:44Z" finished-at="2018-11-22T00:26:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase1 -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.Automation.TC_003@4abdb505]" name="quit" is-config="true" duration-ms="10764" started-at="2018-11-21T16:07:08Z" finished-at="2018-11-21T16:07:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-      </class> <!-- com.project.Automation.TC_003 -->
+        </test-method> <!-- AmazonSearch -->
+      </class> <!-- com.project.Automation.TC_001 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
