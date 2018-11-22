@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25283" started-at="2018-11-22T01:16:40Z" finished-at="2018-11-22T01:17:06Z">
+  <suite name="Default suite" duration-ms="24499" started-at="2018-11-22T01:36:13Z" finished-at="2018-11-22T01:36:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25283" started-at="2018-11-22T01:16:40Z" finished-at="2018-11-22T01:17:06Z">
+    <test name="Default test" duration-ms="24499" started-at="2018-11-22T01:36:13Z" finished-at="2018-11-22T01:36:37Z">
       <class name="com.project.Automation.TC_002">
-        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.project.Automation.TC_002@7d68ef40]" name="testCase1" duration-ms="23647" started-at="2018-11-22T01:16:40Z" finished-at="2018-11-22T01:17:04Z">
+        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.project.Automation.TC_002@7d68ef40]" name="testCase1" duration-ms="22801" started-at="2018-11-22T01:36:13Z" finished-at="2018-11-22T01:36:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCase1 -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.Automation.TC_002@7d68ef40]" name="quit" is-config="true" duration-ms="1573" started-at="2018-11-22T01:17:04Z" finished-at="2018-11-22T01:17:06Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.Automation.TC_002@7d68ef40]" name="quit" is-config="true" duration-ms="1645" started-at="2018-11-22T01:36:35Z" finished-at="2018-11-22T01:36:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

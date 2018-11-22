@@ -41,7 +41,7 @@ public class TC_002 extends BasePage
 		
 		test.log(LogStatus.PASS, "testCase1 is Passed");
 		
-		test.log(LogStatus.FAIL, "screenshot" + test.addScreenCapture("C:\\Users\\DELL\\Desktop\\test.png"));
+		//test.log(LogStatus.FAIL, "screenshot" + test.addScreenCapture("C:\\Users\\DELL\\Desktop\\test.png"));
 		
 		//screenshot
 		takeScreenShot();

@@ -188,13 +188,13 @@ public class BasePage extends ExtentManager
 	public void takeScreenShot() throws Exception
 	{
 		Date dt=new Date();
-		String screenshotFileName = dt.toString().replace(":", "_").replace(" ", "_")+".png";
+		String screenshotFileName = dt.toString().replace(":", "_").replace(" ", "_")+".jpeg";
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		
-		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"//screenshots//"+screenshotFileName));
+		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"\\screenshots\\"+screenshotFileName));
 		
 		//put screen shot file in extent reports
-		test.log(LogStatus.INFO, "Screenshot --> "+ test.addScreenCapture(System.getProperty("user.dir"))+"//screenshots//"+screenshotFileName);
+		test.log(LogStatus.INFO, "Screenshot --> "+ test.addScreenCapture("C:\\Users\\DELL\\git\\Durgasoft8_AMBatch\\Automation\\screenshots\\"+screenshotFileName));
 	}
 
 }
