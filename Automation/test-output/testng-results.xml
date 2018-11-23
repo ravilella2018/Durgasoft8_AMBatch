@@ -1,17 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Starting the Test testCase1]]>
+    </line>
+    <line>
+      <![CDATA[Opened the -- CHROME Browser]]>
+    </line>
+    <line>
+      <![CDATA[Enter the URl with --  https://www.amazon.in]]>
+    </line>
+    <line>
+      <![CDATA[Entered the product by using Locator -- twotabsearchtextbox]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on  Amazon Search Buton by using Locator -- //*[@id="nav-search"]/form/div[2]/div/input]]>
+    </line>
+    <line>
+      <![CDATA[testCase1 is Passed]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24499" started-at="2018-11-22T01:36:13Z" finished-at="2018-11-22T01:36:37Z">
+  <suite name="Default suite" duration-ms="16854" started-at="2018-11-23T03:44:24Z" finished-at="2018-11-23T03:44:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24499" started-at="2018-11-22T01:36:13Z" finished-at="2018-11-22T01:36:37Z">
+    <test name="Default test" duration-ms="16854" started-at="2018-11-23T03:44:24Z" finished-at="2018-11-23T03:44:41Z">
       <class name="com.project.Automation.TC_002">
-        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.project.Automation.TC_002@7d68ef40]" name="testCase1" duration-ms="22801" started-at="2018-11-22T01:36:13Z" finished-at="2018-11-22T01:36:35Z">
+        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.project.Automation.TC_002@20d3d15a]" name="testCase1" duration-ms="14481" started-at="2018-11-23T03:44:24Z" finished-at="2018-11-23T03:44:39Z">
           <reporter-output>
+            <line>
+              <![CDATA[Starting the Test testCase1]]>
+            </line>
+            <line>
+              <![CDATA[Opened the -- CHROME Browser]]>
+            </line>
+            <line>
+              <![CDATA[Enter the URl with --  https://www.amazon.in]]>
+            </line>
+            <line>
+              <![CDATA[Entered the product by using Locator -- twotabsearchtextbox]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on  Amazon Search Buton by using Locator -- //*[@id="nav-search"]/form/div[2]/div/input]]>
+            </line>
+            <line>
+              <![CDATA[testCase1 is Passed]]>
+            </line>
           </reporter-output>
         </test-method> <!-- testCase1 -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.Automation.TC_002@7d68ef40]" name="quit" is-config="true" duration-ms="1645" started-at="2018-11-22T01:36:35Z" finished-at="2018-11-22T01:36:37Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.Automation.TC_002@20d3d15a]" name="quit" is-config="true" duration-ms="2300" started-at="2018-11-23T03:44:39Z" finished-at="2018-11-23T03:44:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

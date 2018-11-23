@@ -21,6 +21,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -31,6 +32,7 @@ public class BasePage extends ExtentManager
 	public static WebDriver driver;
 	public static String path="./config.properties";
 	public Properties prop;
+	public static String screenshotFileName;
 	
 	//Extent Report Object
 		ExtentReports rep=ExtentManager.getInstance();
@@ -162,9 +164,9 @@ public class BasePage extends ExtentManager
 	
 	public boolean verifyText(String locatorKey,String expectedTextKey) throws Exception
 	{
-		String actalText=getElement(locatorKey).getText().trim();
+		String actualText=getElement(locatorKey).getText().trim();
 		String expectedText=prop.getProperty(expectedTextKey);
-		if(actalText.equals(expectedText))
+		if(actualText.equals(expectedText))
 			return true;
 		else
 			return false;
@@ -188,13 +190,15 @@ public class BasePage extends ExtentManager
 	public void takeScreenShot() throws Exception
 	{
 		Date dt=new Date();
-		String screenshotFileName = dt.toString().replace(":", "_").replace(" ", "_")+".jpeg";
-		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		screenshotFileName = dt.toString().replace(":", "_").replace(" ", "_")+".jpeg";
 		
-		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"\\screenshots\\"+screenshotFileName));
+		//Store screenshot in a file
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"//screenshots//"+screenshotFileName));
 		
 		//put screen shot file in extent reports
-		test.log(LogStatus.INFO, "Screenshot --> "+ test.addScreenCapture("C:\\Users\\DELL\\git\\Durgasoft8_AMBatch\\Automation\\screenshots\\"+screenshotFileName));
+		test.log(LogStatus.INFO, "Screenshot --> "+ test.addScreenCapture(System.getProperty("user.dir")+"//screenshots//"+screenshotFileName));
+		Reporter.log("<a href='" + System.getProperty("user.dir")+"//screenshots//"+screenshotFileName + "'> <img src='" + System.getProperty("user.dir")+"//screenshots//"+screenshotFileName + "' height='100' width='100'/> </a>");
 	}
 
 }

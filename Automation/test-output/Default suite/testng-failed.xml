@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.Automation.TC_001">
+      <class name="com.project.Automation.TC_002">
         <methods>
-          <include name="f"/>
+          <include name="testCase1"/>
+          <include name="quit"/>
         </methods>
-      </class> <!-- com.project.Automation.TC_001 -->
+      </class> <!-- com.project.Automation.TC_002 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
