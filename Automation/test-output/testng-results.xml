@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[Test started Running:testCase1]]>
+    </line>
+    <line>
       <![CDATA[Starting the Test testCase1]]>
     </line>
     <line>
@@ -19,14 +22,20 @@
     <line>
       <![CDATA[testCase1 is Passed]]>
     </line>
+    <line>
+      <![CDATA[<a href='C:\Users\DELL\git\Durgasoft8_AMBatch\Automation//success//Sat_Nov_24_10_42_41_IST_2018.png'> <img src='C:\Users\DELL\git\Durgasoft8_AMBatch\Automation//success//Sat_Nov_24_10_42_41_IST_2018.png' height='100' width='100'/> </a>]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16854" started-at="2018-11-23T03:44:24Z" finished-at="2018-11-23T03:44:41Z">
+  <suite name="Suite" duration-ms="14444" started-at="2018-11-24T05:12:42Z" finished-at="2018-11-24T05:12:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16854" started-at="2018-11-23T03:44:24Z" finished-at="2018-11-23T03:44:41Z">
+    <test name="Test" duration-ms="14444" started-at="2018-11-24T05:12:42Z" finished-at="2018-11-24T05:12:56Z">
       <class name="com.project.Automation.TC_002">
-        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.project.Automation.TC_002@20d3d15a]" name="testCase1" duration-ms="14481" started-at="2018-11-23T03:44:24Z" finished-at="2018-11-23T03:44:39Z">
+        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.project.Automation.TC_002@42d8062c]" name="testCase1" duration-ms="12507" started-at="2018-11-24T05:12:42Z" finished-at="2018-11-24T05:12:54Z">
           <reporter-output>
+            <line>
+              <![CDATA[Test started Running:testCase1]]>
+            </line>
             <line>
               <![CDATA[Starting the Test testCase1]]>
             </line>
@@ -45,13 +54,16 @@
             <line>
               <![CDATA[testCase1 is Passed]]>
             </line>
+            <line>
+              <![CDATA[<a href='C:\Users\DELL\git\Durgasoft8_AMBatch\Automation//success//Sat_Nov_24_10_42_41_IST_2018.png'> <img src='C:\Users\DELL\git\Durgasoft8_AMBatch\Automation//success//Sat_Nov_24_10_42_41_IST_2018.png' height='100' width='100'/> </a>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- testCase1 -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.Automation.TC_002@20d3d15a]" name="quit" is-config="true" duration-ms="2300" started-at="2018-11-23T03:44:39Z" finished-at="2018-11-23T03:44:41Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.project.Automation.TC_002@42d8062c]" name="quit" is-config="true" duration-ms="1176" started-at="2018-11-24T05:12:55Z" finished-at="2018-11-24T05:12:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- com.project.Automation.TC_002 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

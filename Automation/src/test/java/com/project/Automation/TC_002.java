@@ -14,9 +14,12 @@ public class TC_002 extends BasePage
 	public static final Logger log=Logger.getLogger(TC_002.class.getName());
 	SoftAssert softAssert=new SoftAssert();
 	
+	
+	
 	@Test
 	public void testCase1() throws Exception 
 	{
+		
 		test=rep.startTest("TC_002");
 		test.log(LogStatus.INFO, "Starting the Test testCase1");
 		Reporter.log("Starting the Test testCase1");
@@ -38,10 +41,10 @@ public class TC_002 extends BasePage
 		
 		
 		//verify Amazon text
-		//if(!verifyText("amazontext_xpath", "amazontext"))
-			//reportFailure("Text did not match");
+		if(!verifyText("amazontext_xpath", "amazontext"))
+			reportFailure("Text did not match");
 		
-		softAssert.assertTrue(verifyText("amazontext_xpath", "amazontext"), prop.getProperty("amazontext")+" - Text is not equal");
+		//softAssert.assertTrue(verifyText("amazontext_xpath", "amazontext"), prop.getProperty("amazontext")+" - Text is not equal");
 		//softAssert.assertTrue(true, "error 1");
 		//softAssert.assertTrue(false, "error 2");
 				
@@ -85,7 +88,12 @@ public class TC_002 extends BasePage
 		}
 		extent.endTest(test);
 		extent.flush();
-		driver.quit();
+		
+		if(driver!=null)
+		{
+			driver.quit();
+		}
+		
 	}
 	
 	

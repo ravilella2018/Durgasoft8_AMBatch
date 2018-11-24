@@ -15,7 +15,8 @@ public class ExtentManager
 		{
 			Date dt=new Date();
 			String fileName = dt.toString().replace(":", "_").replace(" ", "_")+".html";
-			extent=new ExtentReports("D:\\report\\"+fileName);
+			//extent=new ExtentReports("D:\\"+fileName);
+			extent=new ExtentReports(System.getProperty("user.dir")+"//HtmlReports//"+fileName);
 			//extent=new ExtentReports("D://extentreport.html");
 			
 			

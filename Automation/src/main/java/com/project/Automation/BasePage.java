@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -18,10 +17,11 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.Assert;
-import org.testng.Reporter;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -32,13 +32,22 @@ public class BasePage extends ExtentManager
 	public static WebDriver driver;
 	public static String path="./config.properties";
 	public Properties prop;
-	public static String screenshotFileName;
+	public static String screenshotFileName=null;
 	
 	//Extent Report Object
-		ExtentReports rep=ExtentManager.getInstance();
-		ExtentTest test;
+	public ExtentReports rep=ExtentManager.getInstance();
+	public ExtentTest test;
+	
 	
 
+	
+	static 
+	{
+		Date dt=new Date();
+		screenshotFileName = dt.toString().replace(":", "_").replace(" ", "_")+".png";
+	}
+	
+	
 	
 	public void OpenBrowser(String browser) throws Exception
 	{
@@ -61,11 +70,11 @@ public class BasePage extends ExtentManager
 		{
 			//System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"//drivers//geckodriver.exe" );
 			System.setProperty("webdriver.gecko.driver",prop.getProperty("firefoxdriver_exe"));
-			//FirefoxOptions option=new FirefoxOptions();
+			FirefoxOptions option=new FirefoxOptions();
 			
 			//binary
-			//option.setBinary("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-			driver=new FirefoxDriver();
+			option.setBinary("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+			driver=new FirefoxDriver(option);
 		}
 		else if(prop.getProperty(browser).equalsIgnoreCase("IE"))
 		{
@@ -173,6 +182,7 @@ public class BasePage extends ExtentManager
 	}
 	
 	
+	
 	//********************* Reporting Functions *****************
 	
 	public void reportPass(String msg)
@@ -190,15 +200,14 @@ public class BasePage extends ExtentManager
 	public void takeScreenShot() throws Exception
 	{
 		Date dt=new Date();
-		screenshotFileName = dt.toString().replace(":", "_").replace(" ", "_")+".jpeg";
-		
-		//Store screenshot in a file
+		String screenshotFileName = dt.toString().replace(":", "_").replace(" ", "_")+".png";
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"//screenshots//"+screenshotFileName));
+		
+		//FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"//screenshots//"+screenshotFileName));
+		FileHandler.copy(scrFile, new File(System.getProperty("user.dir")+"//failure//"+screenshotFileName));
 		
 		//put screen shot file in extent reports
-		test.log(LogStatus.INFO, "Screenshot --> "+ test.addScreenCapture(System.getProperty("user.dir")+"//screenshots//"+screenshotFileName));
-		Reporter.log("<a href='" + System.getProperty("user.dir")+"//screenshots//"+screenshotFileName + "'> <img src='" + System.getProperty("user.dir")+"//screenshots//"+screenshotFileName + "' height='100' width='100'/> </a>");
+		test.log(LogStatus.INFO, "Screenshot --> "+ test.addScreenCapture(System.getProperty("user.dir"))+"//failure//"+screenshotFileName);
 	}
 
 }
